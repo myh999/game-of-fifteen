@@ -59,18 +59,13 @@ public class Main {
 	    scnr.close();
 	}
 
-	/**
-	 * Clears screen using ANSI escape sequences.
-	 */
+	// Clears screen
 	static void clear()
 	{
 	    System.out.flush();
 	}
 
-	/**
-	 * Initializes the game's board with tiles numbered 1 through d*d - 1
-	 * (i.e., fills 2D array with values but does not actually print them).  
-	 */
+	// Initializes board with a 2-d array
 	static void init()
 	{
 	    int value = d * d - 1;
@@ -86,9 +81,7 @@ public class Main {
 	    }
 	}
 
-	/**
-	 * Prints the board in its current state.
-	 */
+	// Prints the board
 	static void draw()
 	{
 	    for (int i = 0; i < d; i++) {
@@ -100,10 +93,7 @@ public class Main {
 	    }
 	}
 
-	/**
-	 * If tile borders empty space, moves tile and returns true, else
-	 * returns false. 
-	 */
+	// Moves tile, if valid
 	static boolean move(int tile)
 	{
 	    for (int i = 0; i < d; i++) {
@@ -132,10 +122,7 @@ public class Main {
 	    return false;
 	}
 
-	/**
-	 * Returns true if game is won (i.e., board is in winning configuration), 
-	 * else false.
-	 */
+	// Checks for correct order
 	static boolean won()
 	{
 	    int value = 1;
